@@ -8,6 +8,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SwingModule } from 'angular2-swing';
 import { HttpClientModule } from '@angular/common/http';
+import { WeatherProvider } from '../providers/weather/weather';
+import { DataProvider } from '../providers/data/data';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    WeatherProvider,
+    DataProvider
   ]
 })
 export class AppModule {}
