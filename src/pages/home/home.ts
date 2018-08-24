@@ -27,4 +27,8 @@ export class HomePage {
     this.navCtrl.push('AnimatePage');
   }
 
+  openFirebase() {
+    this.navCtrl.push('FirebasePage')
+  }
+
 }

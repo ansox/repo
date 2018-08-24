@@ -10,6 +10,7 @@ import { SwingModule } from 'angular2-swing';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherProvider } from '../providers/weather/weather';
 import { DataProvider } from '../providers/data/data';
+import { FirebaseService } from '../service/firebase-service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DataProvider } from '../providers/data/data';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     WeatherProvider,
-    DataProvider
+    DataProvider,
+    FirebaseService
   ]
 })
 export class AppModule {}
